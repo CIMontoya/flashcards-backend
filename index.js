@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
+const port = 3001
 var cors = require('cors')
 
 app.use(cors())
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 const env = 'development';
 const config = require('./knexfile.js')[env];
@@ -18,4 +22,4 @@ app.get('/', (req, res) => {
     });
 })
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT || port), () => console.log(`Example app listening on port ${port}!`))
