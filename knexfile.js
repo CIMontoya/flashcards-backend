@@ -10,4 +10,5 @@ module.exports = {
       user:     'username',
       password: 'password'
     }
-};
+}
+}
