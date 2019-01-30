@@ -3,7 +3,7 @@ const app = express()
 const port = process.env.PORT || 3001
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const dotenv = require(‘dotenv’).config()
+const dotenv = require('dotenv').config()
 
 const env = process.env.NODE_ENV || 'development';
 const config = require('./knexfile.js')[env];
