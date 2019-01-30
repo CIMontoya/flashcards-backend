@@ -22,7 +22,7 @@ app.get('/', (req, res, next) => {
       res.send(rows);
     })
     .catch((err) => {
-      next(err);
+      console.log(err);
     });
 })
 
